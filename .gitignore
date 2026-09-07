@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Local evidence and generated previews
+evidence/
+output/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

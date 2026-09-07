@@ -1,0 +1,4 @@
+interface:
+  display_name: "Concept to UI"
+  short_description: "Generate concepts, select one, then build measured UI"
+  default_prompt: "Use $concept-to-ui to redesign this interface through concept selection and measured UI fidelity."
