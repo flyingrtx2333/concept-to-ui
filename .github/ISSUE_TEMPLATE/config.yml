@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Quick start / 快速开始
+    url: https://github.com/flyingrtx2333/concept-to-ui/blob/main/QUICKSTART.md
+    about: Check the five-minute workflow before reporting an experience.

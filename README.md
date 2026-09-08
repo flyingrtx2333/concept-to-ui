@@ -1,20 +1,32 @@
 # concept-to-ui
 
-一个面向 Codex 的概念优先 UI 重设计 skill：先检查和测量现有界面，生成至少三个完整方向，等待用户选择，再把选定方向实现为真实可交互 UI，并用确定性的截图对比进行验收。
+**See three UI directions. Choose one. Then let Codex build it.**
 
-> English: A concept-first Codex skill for redesigning web and app screens. It measures the current UI, generates multiple complete directions, pauses for user selection, then guides implementation and deterministic screenshot comparison.
+[简体中文](README.zh-CN.md) · [Quick start](QUICKSTART.md) · [Report an experience](https://github.com/flyingrtx2333/concept-to-ui/issues/new?template=experience-feedback.yml)
 
-## What it does
+`concept-to-ui` is an MIT-licensed Codex skill for concept-first UI redesign. It inspects an existing screen, generates three materially different full-screen concepts, pauses for your choice, implements the selected direction as real interactive UI, and then compares the result with deterministic screenshot tooling.
 
-- 保留现有路由、API、认证、产品逻辑和中文信息架构。
-- 强制执行 A/B/C 概念选择 checkpoint，避免在用户选择前直接改产品 UI。
-- 用内置图像生成能力制作概念图和必要的位图素材。
-- 使用 `analyze_reference.py` 测量参考图，使用 `compare_screenshots.py` 输出可审计的差异报告、diff 和 overlay。
-- 要求真实 DOM 文本和控件、可访问名称、键盘交互、响应式行为以及控制台/网络检查。
+The selection checkpoint is the point: the agent does not silently commit your product to its first design guess.
 
-## Install as a Codex skill
+## Workflow
 
-Clone this repository, then copy or link the repository folder as:
+1. Inspect the existing screen, route, interactions, and constraints.
+2. Generate complete A/B/C design directions.
+3. Stop and wait for the user to choose.
+4. Implement the chosen direction with real DOM, controls, and product data.
+5. Capture the exact viewport and produce a JSON report, diff, and overlay.
+
+The skill preserves existing routes, APIs, authentication, product logic, and information architecture. Concept images are references—not shippable pages or full-screen image backgrounds.
+
+## Install
+
+Install it into a project with the Skills CLI:
+
+```bash
+npx skills add flyingrtx2333/concept-to-ui --agent codex --skill concept-to-ui
+```
+
+Or clone this repository and copy or link it to:
 
 ```text
 <CODEX_HOME>/skills/concept-to-ui/
@@ -23,57 +35,77 @@ Clone this repository, then copy or link the repository folder as:
 On Windows, the default location is:
 
 ```text
-%USERPROFILE%\\.codex\\skills\\concept-to-ui\\
+%USERPROFILE%\.codex\skills\concept-to-ui\
 ```
 
-Restart or refresh Codex skill discovery if needed. Invoke it explicitly with:
+Restart or refresh skill discovery if needed, then invoke:
 
 ```text
 $concept-to-ui
 ```
 
-The skill intentionally uses Codex's built-in image-generation capability and does not require another skill package.
+For a five-minute walkthrough, see [QUICKSTART.md](QUICKSTART.md).
 
-## Use the bundled scripts
+## Requirements
 
-The helper scripts require Python 3.10+ and Pillow:
+- A Codex environment with built-in image generation and browser/screenshot access
+- Python 3.10+
+- Pillow 10–12 for the bundled image tools
+- An existing web or app screen to redesign
 
-```powershell
+Install the script dependency:
+
+```bash
 python -m pip install -r requirements.txt
-python scripts/analyze_reference.py reference.png --output evidence/reference-analysis.json
-python scripts/compare_screenshots.py reference.png render.png `
-  --report evidence/report.json `
-  --diff evidence/diff.png `
+```
+
+## Screenshot tools
+
+Measure a reference image:
+
+```bash
+python scripts/analyze_reference.py reference.png \
+  --output evidence/reference-analysis.json
+```
+
+Compare an implementation with the selected concept:
+
+```bash
+python scripts/compare_screenshots.py reference.png render.png \
+  --report evidence/report.json \
+  --diff evidence/diff.png \
   --overlay evidence/overlay.png
 ```
 
-Both scripts are deterministic for the same input files and options. The comparator returns a non-zero exit code when its configured thresholds fail.
+For identical inputs and options, both scripts are deterministic. The comparator exits non-zero when configured thresholds fail. Its pixel metrics are evidence of visual difference, not a claim that a design is subjectively good.
 
 ## Repository layout
 
 ```text
-SKILL.md                         # Skill entrypoint
-agents/openai.yaml               # Codex UI metadata
-references/                      # Phase-specific detailed guidance
-scripts/analyze_reference.py    # Reference image measurement
-scripts/compare_screenshots.py  # Screenshot comparison and artifacts
-tests/                           # Lightweight helper-script tests
+SKILL.md                         Skill entrypoint
+agents/openai.yaml               Codex UI metadata
+references/                      Phase-specific guidance
+scripts/analyze_reference.py     Reference measurement
+scripts/compare_screenshots.py   Comparison report and artifacts
+tests/                           Helper-script tests
 ```
 
-## Design boundaries
+## Scope and safety
 
-This skill does not authorize deployment, publishing, backend changes, authentication changes, or production mutation. It is intended to guide an agent working inside the target product repository; the generated concept image is never a substitute for a real frontend implementation.
+This skill does not authorize deployment, publishing, backend changes, authentication changes, or production mutation. It guides an agent working inside the target product repository and keeps visible text and controls as real, accessible UI.
 
-## Contributing
+## Feedback and contributing
 
-Keep the entrypoint concise and self-contained. Put phase-specific detail in `references/`, keep scripts deterministic and dependency-light, and validate changes with the commands below:
+This is an early release. The most useful feedback is a reproducible experience report: whether A/B/C were meaningfully different, whether Codex waited for your choice, whether existing behavior survived implementation, and the exact step where the flow failed.
 
-```powershell
+[Open the experience feedback form](https://github.com/flyingrtx2333/concept-to-ui/issues/new?template=experience-feedback.yml), or read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a code change.
+
+Run these checks before opening a pull request:
+
+```bash
 python -m unittest discover -s tests -v
 python <path-to-skill-creator>/scripts/quick_validate.py .
 ```
-
-Please preserve the phase gate and the distinction between visual concept evidence and real DOM implementation.
 
 ## License
 

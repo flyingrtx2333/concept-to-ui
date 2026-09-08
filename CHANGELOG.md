@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added separate English and Simplified Chinese homepages.
+- Added a bilingual five-minute quick start and structured experience feedback form.
+- Kept reference-image analysis compatible with Pillow 10–12.
+
 ## 0.1.0 - 2026-09-07
 
 - 首次发布独立的 `concept-to-ui` Codex skill 仓库。

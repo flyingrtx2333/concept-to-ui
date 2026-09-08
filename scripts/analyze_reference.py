@@ -28,7 +28,13 @@ def analyze_image(path: Path, top_colors: int = 8) -> dict[str, Any]:
     with Image.open(source) as opened:
         rgb = opened.convert("RGB")
         width, height = rgb.size
-        counts = Counter(rgb.get_flattened_data())
+        # ``get_flattened_data`` was introduced in Pillow 12.1. Keep the
+        # declared Pillow 10–12 range working without changing the output.
+        get_flattened_data = getattr(rgb, "get_flattened_data", None)
+        pixel_data = (
+            get_flattened_data() if callable(get_flattened_data) else rgb.getdata()
+        )
+        counts = Counter(pixel_data)
 
     ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
     colors = [
