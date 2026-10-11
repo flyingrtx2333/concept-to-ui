@@ -4,6 +4,8 @@ This walkthrough tests the most important behavior: three real directions appear
 
 本指南验证最重要的行为：先出现三套真正不同的方向，选择视觉后制作独立动效小样，选择动效后才接入产品 UI。
 
+首次展示的三套应是内部审查与必要修整后的成稿；初次生成的图片只是草稿。不要把同一面板的换色版本或已知明显缺陷交给用户选择。出图工具可能自动显示草稿，但选择关卡只展示通过检查的最终方案。
+
 Before generation, inspect relevant design references and record a distinct art-direction brief for each concept. High-end visual authorship applies to H5, web, mini-programs and native apps alike; adapt typography, composition and expressive effects to the actual task and platform.
 
 出图前先实际查看设计参考，并为每套方案确定独立的美术方向。H5、网站、小程序和原生应用都以有辨识度的高端设计为目标；字体、构图与表现性动效按实际任务和平台适配。

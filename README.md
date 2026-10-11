@@ -8,6 +8,8 @@
 
 The selection checkpoint is the point: the agent does not silently commit your product to its first design guess.
 
+Before first delivery, resolve composition, review drafts and refine only failed directions within a bounded allowance. Selection options must pass the [presentation-quality gate](references/concept-quality.md); generic layouts, coarse type and misleading prominent graphics cannot be deferred to implementation. First-delivery quality means curated results, not a guarantee of one-call generation or subjective approval.
+
 H5, web, mini-program, desktop and native concepts share a high-end art-direction standard: inspect strong references, then establish original composition, typography, material and a product-specific visual signature. Adapt expressive effects to the task and platform; a clean generic template is not the aesthetic finish line. Static imagery and actual motion receive separate evaluation.
 
 The [local design library](references/design-library/index.md) includes 12 studied cases and 18 saved screenshots with source/date, adaptations and evidence limitations. Retrieve a few relevant cases per task; these are study references, not production assets or fixed templates.

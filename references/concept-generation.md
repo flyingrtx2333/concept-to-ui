@@ -2,6 +2,8 @@
 
 Use this reference only during the concept phase.
 
+Apply [concept-quality.md](concept-quality.md) before the selection checkpoint. An initial generated file is a draft, not automatically a selectable concept.
+
 ## Whole-screen or regional scope
 
 Follow the boundary recorded during inspection. For a regional redesign, generate only that region at its crop dimensions/aspect ratio and preserve its controls and states. Supply the region crop as the primary reference; label a wider screenshot as style context whose shell, navigation, and neighboring components must not appear in the generated output. Distinguish directions using geometry, density, emphasis, or imagery inside the permitted region rather than changing the surrounding design system.
@@ -14,7 +16,7 @@ Read [art-direction.md](art-direction.md) first. Use inspected references to dev
 
 Use the [case library](design-library/index.md) selectively. In the brief, name the chosen cases and the concrete relationship being adapted (for example, baseline rhythm, localized light, contrast ladder or functional geometry), then explain its product-specific transformation. Do not merely append brand names to a prompt. A/B/C must differ in composition and visual logic, not share the same template with three reference-site names.
 
-Generate at least three directions that differ in composition and interaction emphasis, not merely color. Derive each direction from the actual product and brand. For example, explore a focused single-task workspace, a compact operational overview, and a guided sequence only when all three genuinely fit the screen. Do not carry a fixed industry's palette, imagery, or terminology into an unrelated product. Each concept must retain every required product role and primary action.
+Plan three directions by default, or the user-requested count, that differ in composition and interaction emphasis rather than color. Resolve their reading paths and visual grammar before generation. Derive them from the actual product and brand; do not carry a fixed industry's palette, imagery or terminology into unrelated work. Each final concept retains required product roles and actions and passes draft review.
 
 ## Premium minimal design and copy budget
 
@@ -41,19 +43,19 @@ Review each output at target window size against these six questions, recording 
 5. Data graphics: are axes/labels readable, proportion encodings plausible, and competing series identifiable?
 6. Product realism: do controls and information form a feasible usable app instead of a marketing comp or generic dashboard template?
 
-Reject and regenerate any concept with a major defect in these areas. Preserve the rejected output and its reason if useful for tracing the revision. Where a user's subjective preference remains uncertain, present the actual alternatives honestly instead of asserting that a rubric proves aesthetic quality.
+Block presentation for a major defect. Apply the responsible repair and bounded retry rules in concept-quality; keep discarded drafts and reasons separate. Subjective preference remains the user's choice among finished directions, not a reason to submit a plainly weak draft. A rubric does not guarantee subjective approval.
 
 After a rejected round, summarize the concrete recurring failure and propose materially different composition/art directions. Do not resubmit near-identical concepts with new names. Keep prior evidence separate and restart the visual choice; previous acceptance does not apply to a replacement direction.
 
 ## Built-in ImageGen prompt template
 
-Issue one `image_gen.imagegen` call per direction. When a local screenshot is supplied, inspect it first and pass it as a reference image.
+Issue one initial `image_gen.imagegen` call per planned direction and inspect it before justified repairs. Inspect any supplied local screenshot first; attach it only when it helps preserve the requested product/style without anchoring to a rejected layout. Otherwise carry audited functions in text. This template is a writing aid: combine/remove redundant fields to keep composition dominant, rather than append a long generic constraint wall.
 
 ```text
 Use case: ui-mockup
 Asset type: <complete application screen or specified region> UI concept
 Primary request: redesign <screen or editable region> while preserving its product roles and actions
-Input images: Image 1 is <current full screen or region crop>; use its information architecture. Any wider reference is style context only.
+Input images, when used: <product/scope reference role>; <limited style-reference role and exact relationship to adapt>. No copied source branding/copy or inherited rejected geometry.
 Output bounds: <exact width>x<exact height>; match the screen or region aspect ratio
 Product: <what the application does>
 Required sections: <real sections/actions from the product>
@@ -101,6 +103,8 @@ Save `concept-manifest.json` beside the concepts:
   "editable_bounds": null,
   "unchanged_regions": [],
   "authorized_shared_changes": [],
+  "review": "concept-review.md",
+  "drafts": [],
   "concepts": [
     {
       "id": "A",
@@ -118,5 +122,7 @@ Save `concept-manifest.json` beside the concepts:
 ```
 
 Update `selected` only after the user chooses the visual direction. This selection permits isolated motion prototypes, not final product integration; the separate motion choice is recorded in `motion-manifest.json`. Do not delete non-selected previews until implementation is accepted.
+
+Before presentation, `concepts` contains only ready candidates. Record each failed/replaced attempt in `drafts` with its ID, path, blocking reason and replacement; tie final IDs to actual review decisions. Do not use an implementation residual list to excuse a blocked draft.
 
 For regional work, set `scope` to `region`, retain the full-screen `viewport`, and record `editable_component`, `editable_bounds` as `[x, y, width, height]`, unchanged regions, and authorized shared changes. Record crop/preview paths and any crop scaling alongside the concept paths so implementation uses the regional reference rather than the composed full-screen preview.

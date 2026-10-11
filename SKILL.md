@@ -35,29 +35,28 @@ python '<this-skill>\scripts\analyze_reference.py' '<reference>' `
 
 ## Phase 2: generate concepts within scope
 
-Read [references/art-direction.md](references/art-direction.md) and [references/concept-generation.md](references/concept-generation.md), then use the built-in `image_gen.imagegen` tool directly.
+Read [references/art-direction.md](references/art-direction.md), [references/concept-generation.md](references/concept-generation.md) and [references/concept-quality.md](references/concept-quality.md). Use the built-in `image_gen.imagegen` tool directly. First delivery means a curated set after internal review and bounded refinement, not the first three generated files.
 
 - Treat exceptional art direction as the default across H5, websites, mini-programs, desktop and native apps. A clean, functional template is not sufficient. Establish a distinctive product-specific visual idea, crafted typography, deliberate composition, and an appropriate material/motion language; minimal copy must remain minimal.
 - Research a small set of relevant first-party design references before a new visual direction. Visually inspect the actual page/app, and exercise motion when motion is the reference; search excerpts cannot establish visual quality or particle behavior. Record URLs, date, observed details, limitations and intended adaptation in `design-research.md`. Reuse recent relevant research rather than browse again for every minor revision.
 - Consult the [local design library](references/design-library/index.md) by task and visual intent. Open only relevant case notes and their saved screenshots; choose complementary references for composition, craft and interaction instead of mixing whole styles. Record the chosen case IDs and specific adaptations in the brief. These are study references, not reusable product assets or fixed A/B/C templates.
 - Translate reference principles to the product's platform, density and task. A marketing hero, a financial workspace and a mini-program flow need different compositions. Antigravity-style particles are an example of an expressive signature, not a required effect or a substitute for art direction. Preserve brand originality and functional readability.
 
-- Generate at least three materially different concepts: A, B, and C. Use full-screen concepts for a whole-screen request; for a regional request, generate only the editable region at its aspect ratio, with its required functions complete.
+- Deliver three materially different presentation-ready concepts A/B/C by default, or the user's requested count. Resolve distinct composition theses before generation; inspect drafts and repair only failed directions within the bounded refinement workflow. Never pad the set with an unfinished or generic option. Use full-screen concepts for a whole-screen request; for a regional request, generate only the editable region at its aspect ratio, with its required functions complete.
 - For regional concepts, preserve the surrounding design system and vary only elements permitted by the boundary. Never ask the generator to redraw unchanged navigation, page chrome, or neighboring components. If a full-screen preview is useful, composite the generated region into the original screenshot deterministically, retaining the original surrounding pixels.
-- Make each call separately with a direction-specific prompt. The supplied screenshot is a visual/product reference, not an edit target.
+- Make each call separately with a concise direction-specific brief. Inspect product and style references separately; avoid attaching a rejected layout when audited content can preserve its functions without anchoring the composition. Use targeted image edits only to repair a reviewed draft.
 - Keep the same product functions and Chinese information architecture; change visual hierarchy, composition, imagery, and interaction emphasis.
 - Make the primary action and its result clear without explanatory card stacks, repeated subtitles, decorative metrics, emoji icons, or a narrow content column surrounded by accidental blank space.
 - Before generation, define a concrete art-direction brief: composition thesis, spacing grid, typographic scale at the real window size, palette/material limits, chart treatment, and the specific weaknesses of the rejected round. For repeated revision, inspect prior concepts and change those weaknesses materially; do not recycle the same template with different section positions.
 - Default to professional, premium minimal composition: precise alignment, deliberate hierarchy, restrained materials, a coherent numeric/type scale, and balanced density. Do not interpret premium as extra glass, gradients, giant numbers, ornamental whitespace, or stock dashboard cards.
 - Enforce a visible-copy whitelist before generation. In a Chinese interface, forbid unnecessary English, bilingual labels, slogans, redundant subtitles, and repeated instructions; retain English only when it is necessary product data or an identifier. Prefer one currency indication to repeating CNY on every metric. Required notices, errors, and provenance must remain concise and truthful.
 - Concept images may contain illustrative labels, but final selectable text must be real DOM or native accessible text/controls.
-- Inspect every result at the actual target window size using the visual-quality rubric in `references/concept-generation.md`. Reject broken hierarchy, coarse or oversized typography, arbitrary spacing, excessive color, inconsistent chart geometry, generic template composition, or a direction without meaningful distinction. Functional completeness alone is insufficient. Do not call a result premium or professional merely because the prompt requested it.
-- Judge visual authorship separately from usability: explain the identifiable design idea and its visible execution in each concept. Reject interchangeable template work even if all functional checks pass. Review static composition without effects; motion or glow must not conceal weak fundamentals. Record a feasible framework-specific path for each proposed signature effect. Still images show its resting appearance, not working animation.
+- Apply the presentation-blocking checks in `references/concept-quality.md` alongside the visual rubric. Generic composition, weak hierarchy, coarse type or misleading prominent graphics require repair before selection; a residual note or promised implementation fix does not waive this gate. Judge visual authorship separately from usability and inspect composition without effects. Do not infer quality from requested adjectives or self-assigned scores. Record feasibility of signature effects; static images do not prove animation.
 - Save durable previews under `<project>/evidence/ui-concepts/<screen>/`; record prompts and paths in `concept-manifest.json`.
 
 ## Phase 3: visual selection checkpoint
 
-Show all concepts inline with labels A/B/C and one concise tradeoff per direction. Ask the user which visual direction to take into motion prototyping. Stop. Do not merge directions or pick silently.
+Show only the curated presentation-ready set inline with labels A/B/C and one concise tradeoff per direction. Drafts and rejected attempts are not selection options. Ask which visual direction to take into motion prototyping. Stop. Do not merge directions or pick silently.
 
 If the user requests a hybrid, restate the exact elements taken from each concept and treat that hybrid specification as the selected comp.
 
@@ -153,6 +152,7 @@ After each capture, list the five largest mismatches with coordinates and type: 
 
 - `design-research.md` with inspected references, platform adaptations and A/B/C art-direction briefs.
 - A/B/C concept images and `concept-manifest.json`.
+- `concept-review.md` documenting draft review, justified repairs and presentation-ready decisions; discarded drafts kept separate from selectable concepts.
 - Selected immutable visual reference and recorded visual choice/waiver.
 - 2–3 runnable motion alternatives, an interaction-to-motion coverage inventory with justified exclusions, `motion-manifest.json`, launch instructions, available comparison clips, and recorded motion choice/waiver.
 - Dynamic observation report covering the agreed interaction sequence, interruption/reversal, and Reduce Motion; measured performance evidence only when actually collected.

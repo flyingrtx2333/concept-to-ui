@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Changed first delivery from three initial generations to a curated set: pre-generation spatial plans, concise briefs, rejected-layout de-anchoring, blocking quality checks and bounded targeted refinement. Prominent design/data defects can no longer be deferred as implementation residuals.
 - Added a selectively loaded local design library: 12 case notes, 18 browser screenshots, source/date and evidence metadata, task-based retrieval and concrete adaptations from recent.design discoveries and original-site study.
 - Added cross-platform high-end art direction, observed reference research, original visual signatures, expressive particle/light treatments and platform-specific adaptation; generic functional templates no longer meet the aesthetic target.
 - Added target-size typography calibration, explicit art-direction briefs, a six-part visual-quality review, and rejection-driven revisions instead of recycled dashboard layouts.

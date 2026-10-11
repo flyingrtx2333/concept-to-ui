@@ -25,7 +25,7 @@ Define a composition thesis for each A/B/C before writing image prompts. A usefu
 - Motion: trigger, spatial relationship and resting appearance of proposed effects; feasibility in the existing stack.
 - Copy whitelist and what changes materially from rejected concepts.
 
-Each direction must have visibly different authorship, not the same dashboard with light/dark skins. “Premium,” “cinematic,” or “Apple-like” without these choices is not a brief. Reference a principle rather than copying another site's logo, wording, entire composition or branding.
+Each direction must have visibly different authorship, not the same dashboard with light/dark skins. Compare spatial plans before generation: a new palette or rearranged panel positions alone does not establish a new reading path. “Premium,” “cinematic,” or “Apple-like” without these choices is not a brief. Reference a principle rather than copying another site's logo, wording, entire composition or branding.
 
 ## Adapt by product and platform
 
@@ -59,6 +59,8 @@ Inspect at real target size and compare with the studied references for craft, n
 5. Are A/B/C clearly distinct and credible for this product on this platform?
 
 State observed weaknesses, not promotional adjectives. Reject major failures in authorship as well as usability. “All content is present” and “the palette is restrained” do not establish high-end design. User preference remains decisive; no rubric guarantees subjective approval.
+
+Execute the [first-delivery review and repair workflow](concept-quality.md). Reference research must change generation and curation decisions, not just add a source list. Do not present a known generic result because it is complete or because its prompt used the right reference names.
 
 ## Studied first-party starting points
 
