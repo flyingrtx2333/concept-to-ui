@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- Added a selectively loaded local design library: 12 case notes, 18 browser screenshots, source/date and evidence metadata, task-based retrieval and concrete adaptations from recent.design discoveries and original-site study.
+- Added cross-platform high-end art direction, observed reference research, original visual signatures, expressive particle/light treatments and platform-specific adaptation; generic functional templates no longer meet the aesthetic target.
+- Added target-size typography calibration, explicit art-direction briefs, a six-part visual-quality review, and rejection-driven revisions instead of recycled dashboard layouts.
+
+- Tightened professional minimal composition and Chinese copy whitelists; added broad interaction-to-motion coverage with justified static exclusions.
+
+- Added sequential visual and motion selection gates, isolated interactive prototypes, native Apple previews, and dynamic acceptance separate from frozen screenshot comparison.
+
+- Restored regional redesign scope, crop-only concepts, unchanged-shell previews, and separate regional fidelity and surrounding-UI checks.
 - Added separate English and Simplified Chinese homepages.
 - Added a bilingual five-minute quick start and structured experience feedback form.
 - Kept reference-image analysis compatible with Pillow 10–12.

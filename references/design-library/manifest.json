@@ -1,0 +1,364 @@
+{
+  "updated": "2026-10-12",
+  "discovery_sources": [
+    "https://recent.design/?ref=godly&category=web",
+    "https://recent.design/websites"
+  ],
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "paper-mono",
+      "title": "Paper Mono · 字体成为主视觉",
+      "source": "https://recent.design/i/mi01tni-paper-mono-font-site",
+      "date": "2026-10-11",
+      "evidence": "Gallery detail preview; original interactions not inspected.",
+      "tags": [
+        "typography",
+        "construction-grid",
+        "light"
+      ],
+      "note": "paper-mono.md",
+      "screenshots": [
+        {
+          "path": "screenshots/paper-mono-detail.png",
+          "state": "detail",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "865c9d0848aaa1a7379244c2289cd8adb3b36a7bed59b32b36a4b90f2c747025"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "cassette-portfolio",
+      "title": "WebGL Portfolio · 一致光线与空间层次",
+      "source": "https://recent.design/i/68a8v4h-webgl-portfolio-explorer",
+      "date": "2026-10-11",
+      "evidence": "Gallery detail preview only.",
+      "tags": [
+        "depth",
+        "monochrome",
+        "object-composition"
+      ],
+      "note": "cassette-portfolio.md",
+      "screenshots": [
+        {
+          "path": "screenshots/cassette-portfolio-detail.png",
+          "state": "detail",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "a7f3828c3a09550390f6cdaee05a030e8d1d1d7046639e3213eddfd067147324"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "antigravity",
+      "title": "Antigravity · 疏密粒子与清晰前景",
+      "source": "https://antigravity.google/",
+      "date": "2026-10-11",
+      "evidence": "Original site; initial and time-separated pointer-position captures.",
+      "tags": [
+        "particles",
+        "light",
+        "atmosphere"
+      ],
+      "note": "antigravity.md",
+      "screenshots": [
+        {
+          "path": "screenshots/antigravity-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "9e68f65412ec5a6121c64820ecf82cc387798ba29b01229f402f5c67d6ad9327"
+        },
+        {
+          "path": "screenshots/antigravity-pointer.png",
+          "state": "pointer",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "aef3265288a0b4d0c14facb3c06be6acc833a5e66bb17cb9946cc2ee37128d29"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "linear",
+      "title": "Linear · 深色界面的精密层级",
+      "source": "https://linear.app/",
+      "date": "2026-10-11",
+      "evidence": "Original site first rendered frame.",
+      "tags": [
+        "dark",
+        "dense-ui",
+        "tonal-depth"
+      ],
+      "note": "linear.md",
+      "screenshots": [
+        {
+          "path": "screenshots/linear-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "c1ec0964a0939a37c00b3a07d3a212fab1a1daa45fc1e283c45c4ba6b319e2f2"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "augen",
+      "title": "Augen Pro · 柔光主体与不对称平衡",
+      "source": "https://augen.pro/",
+      "date": "2026-10-11",
+      "evidence": "Original site initial and scrolled frames.",
+      "tags": [
+        "soft-light",
+        "asymmetry",
+        "image-direction"
+      ],
+      "note": "augen.md",
+      "screenshots": [
+        {
+          "path": "screenshots/augen-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "24d62e8d947c86e18b7cc377f87dc25bad7885ccb55cd647ad298afeac22cfc8"
+        },
+        {
+          "path": "screenshots/augen-scroll.png",
+          "state": "scroll",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "4672c18cd8528a8ee844b8575e4a5c4a820c260c344dea912bcfeb4eced98791"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "harry-atkins",
+      "title": "Harry Atkins · 基线、细线与排版秩序",
+      "source": "https://harryjatkins.com/",
+      "date": "2026-10-12",
+      "evidence": "Original site initial, pointer-position and scrolled frames.",
+      "tags": [
+        "editorial",
+        "grid",
+        "typography"
+      ],
+      "note": "harry-atkins.md",
+      "screenshots": [
+        {
+          "path": "screenshots/harry-atkins-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "f33a9d9e4253c815aaab38a8f76e92e58b859576930b73df95a8c2343add5113"
+        },
+        {
+          "path": "screenshots/harry-atkins-scroll.png",
+          "state": "scroll",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "c926cd6051c8ccf899052015e2b72066ff57002f5ea89dc017802000c607d1e8"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "displace",
+      "title": "Displace · 影像与操作层分离",
+      "source": "https://displace.agency/",
+      "date": "2026-10-12",
+      "evidence": "Original site initial, pointer-position and scrolled frames.",
+      "tags": [
+        "cinematic",
+        "navigation",
+        "layering"
+      ],
+      "note": "displace.md",
+      "screenshots": [
+        {
+          "path": "screenshots/displace-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "c8d073efaf4f7c268b2f4b6d3ce57a07d2fdbcae6bc120a4c073fb4a30042688"
+        },
+        {
+          "path": "screenshots/displace-scroll.png",
+          "state": "scroll",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "a28b189b5478bcef59511f2284306bdb9a58503ee0b3d6a1e332edc97dad9bd4"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "gregor-collienne",
+      "title": "Gregor Collienne · 图像尺度与视觉节奏",
+      "source": "https://gregorcollienne.com/",
+      "date": "2026-10-12",
+      "evidence": "Original site initial and scrolled frames; list-mode control could not be exercised.",
+      "tags": [
+        "photography",
+        "asymmetry",
+        "rhythm"
+      ],
+      "note": "gregor-collienne.md",
+      "screenshots": [
+        {
+          "path": "screenshots/gregor-collienne-initial.png",
+          "state": "initial",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "dba1b2006dbabf9aa6ebf52d70ae32ad5755a923a26ea6afc9f3fca008889512"
+        },
+        {
+          "path": "screenshots/gregor-collienne-scroll.png",
+          "state": "scroll",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "6a87d9ecb413fe8d5a0402304762df078ffc667783b304659d4194c2efa6b7d4"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "podium",
+      "title": "Podium · 品牌形状成为内容容器",
+      "source": "https://podium.global/",
+      "date": "2026-10-12",
+      "evidence": "Original site after waiting for load, then scrolled frame; one canvas observed.",
+      "tags": [
+        "mask",
+        "brand-shape",
+        "spatial-transition"
+      ],
+      "note": "podium.md",
+      "screenshots": [
+        {
+          "path": "screenshots/podium-settled.png",
+          "state": "settled",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "1f472c2ea19664068a01e55dae4ac60c29f95a086b6fa5f9044766b08c35e859"
+        },
+        {
+          "path": "screenshots/podium-scroll.png",
+          "state": "scroll",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "200431438c7c008585bd37f63b87ede8b9c6748c4a393c2853056be425dd6a65"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "co-watch",
+      "title": "CO’WATCH! · 精密工具也可以成为视觉作品",
+      "source": "https://recent.design/i/xlkm77w-co-watch-clock-web-app",
+      "date": "2026-10-12",
+      "evidence": "Gallery detail preview only.",
+      "tags": [
+        "instrument",
+        "numerals",
+        "functional-art"
+      ],
+      "note": "co-watch.md",
+      "screenshots": [
+        {
+          "path": "screenshots/co-watch-detail.png",
+          "state": "detail",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "03cbb364ac307b36f59c964fee1632d53ac4c90e6ba88892b83a5b391db7396b"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "octolane",
+      "title": "Octolane · 局部光场与安静的主体",
+      "source": "https://recent.design/i/myd098z-octolane-footer-refraction-shader",
+      "date": "2026-10-12",
+      "evidence": "Gallery detail preview only.",
+      "tags": [
+        "refraction",
+        "light-field",
+        "dark"
+      ],
+      "note": "octolane.md",
+      "screenshots": [
+        {
+          "path": "screenshots/octolane-detail.png",
+          "state": "detail",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "407982875aa92b6b8a51529a447b0c10fce75fa616b16e6657096fccd6711841"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    },
+    {
+      "id": "antimetal",
+      "title": "Antimetal · 技术功能的视觉化表达",
+      "source": "https://recent.design/i/gnxw7rg-antimetal-product-pages",
+      "date": "2026-10-12",
+      "evidence": "Gallery detail preview only.",
+      "tags": [
+        "product-illustration",
+        "type-contrast",
+        "light"
+      ],
+      "note": "antimetal.md",
+      "screenshots": [
+        {
+          "path": "screenshots/antimetal-detail.png",
+          "state": "detail",
+          "pixels": [
+            1440,
+            1000
+          ],
+          "sha256": "f60bb8f04dc40251d28d59ad71d192f372f78d366edaee95987d4feeaaa5a487"
+        }
+      ],
+      "capture_kind": "browser screenshot; study only; not licensed production assets"
+    }
+  ]
+}

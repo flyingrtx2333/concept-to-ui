@@ -1,20 +1,25 @@
 # concept-to-ui
 
-**See three UI directions. Choose one. Then let Codex build it.**
+**Choose the look. Try the motion. Then let Codex integrate it.**
 
 [简体中文](README.zh-CN.md) · [Quick start](QUICKSTART.md) · [Report an experience](https://github.com/flyingrtx2333/concept-to-ui/issues/new?template=experience-feedback.yml)
 
-`concept-to-ui` is an MIT-licensed Codex skill for concept-first UI redesign. It inspects an existing screen, generates three materially different full-screen concepts, pauses for your choice, implements the selected direction as real interactive UI, and then compares the result with deterministic screenshot tooling.
+`concept-to-ui` is an MIT-licensed Codex skill for concept-first UI redesign. It inspects an existing screen, generates three materially different full-screen concepts, pauses for your visual choice, builds 2–3 isolated interactive motion prototypes, pauses for your motion choice, and then integrates the selected design with separate static and dynamic verification.
 
 The selection checkpoint is the point: the agent does not silently commit your product to its first design guess.
+
+H5, web, mini-program, desktop and native concepts share a high-end art-direction standard: inspect strong references, then establish original composition, typography, material and a product-specific visual signature. Adapt expressive effects to the task and platform; a clean generic template is not the aesthetic finish line. Static imagery and actual motion receive separate evaluation.
+
+The [local design library](references/design-library/index.md) includes 12 studied cases and 18 saved screenshots with source/date, adaptations and evidence limitations. Retrieve a few relevant cases per task; these are study references, not production assets or fixed templates.
 
 ## Workflow
 
 1. Inspect the existing screen, route, interactions, and constraints.
 2. Generate complete A/B/C design directions.
 3. Stop and wait for the user to choose.
-4. Implement the chosen direction with real DOM, controls, and product data.
-5. Capture the exact viewport and produce a JSON report, diff, and overlay.
+4. Try 2–3 motion variants of the same selected layout and choose one.
+5. Integrate both choices using real web or native controls and product data.
+6. Capture static fidelity evidence and separately verify interruption, reversal, and Reduce Motion with animations enabled.
 
 The skill preserves existing routes, APIs, authentication, product logic, and information architecture. Concept images are references—not shippable pages or full-screen image backgrounds.
 
@@ -48,7 +53,8 @@ For a five-minute walkthrough, see [QUICKSTART.md](QUICKSTART.md).
 
 ## Requirements
 
-- A Codex environment with built-in image generation and browser/screenshot access
+- A Codex environment with built-in image generation and platform-appropriate preview/capture access
+- For native apps, the target platform build/run tools; for web, a local browser preview
 - Python 3.10+
 - Pillow 10–12 for the bundled image tools
 - An existing web or app screen to redesign
@@ -110,3 +116,5 @@ python <path-to-skill-creator>/scripts/quick_validate.py .
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+Design quality: premium minimal composition and a strict visible-copy budget. Chinese interfaces exclude redundant English, subtitles, and repeated instructions. Motion prototypes cover eligible interaction regions with justified static exclusions, rather than a few isolated animated samples.

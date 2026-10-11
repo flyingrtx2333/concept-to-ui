@@ -1,4 +1,4 @@
 interface:
   display_name: "Concept to UI"
-  short_description: "Generate concepts, select one, then build measured UI"
-  default_prompt: "Use $concept-to-ui to redesign this interface through concept selection and measured UI fidelity."
+  short_description: "Research high-end visuals, choose motion, build UI"
+  default_prompt: "Use $concept-to-ui to research relevant design references and create distinctive high-end visual concepts for this platform, then choose an interactive motion prototype before integrating and verifying the UI."
